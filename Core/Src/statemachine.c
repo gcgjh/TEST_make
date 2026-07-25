@@ -4,8 +4,11 @@
 
 static uint16_t custom_cnt = 0, last_cnt = 0, use_cnt = 0, use_cnt_last = 0;
 
+
 uint8_t CDC_Send(uint8_t *buf, uint16_t len)
-{   uint32_t tick_start = HAL_GetTick();
+{
+#if USE_USB_CDC
+    uint32_t tick_start = HAL_GetTick();
     const uint32_t timeout = 5; // Timeout
     while(CDC_Transmit_FS((uint8_t *)buf, len)==USBD_BUSY)
     {
@@ -15,8 +18,10 @@ uint8_t CDC_Send(uint8_t *buf, uint16_t len)
         }
         HAL_Delay(1);
     }
+#endif
     return OK;
 }
+
 
 int statemachine(int (* func)(void)) {
     func();
@@ -41,6 +46,7 @@ int led_toggle(void)
 
 int DI_KEY_check(void)
 {
+#if USE_DI_KEY
     if (DI_KEY_Flag == 1)
     {
         DI_KEY_Flag = 0;
@@ -48,6 +54,7 @@ int DI_KEY_check(void)
         __HAL_TIM_SET_COUNTER(&htim3, 30000);
         return OK;
     }
+#endif
     return 0;
 }
 
@@ -55,6 +62,7 @@ int DI_KEY_check(void)
 
 int digit_encoder_check(void)
 {
+#if USE_DIGIT_ENCODER
     uint16_t currenr_cnt = __HAL_TIM_GET_COUNTER(&htim3);
     uint16_t diff = currenr_cnt - last_cnt;
     last_cnt = currenr_cnt;
@@ -68,5 +76,6 @@ int digit_encoder_check(void)
         int length = snprintf(buffer, sizeof(buffer), "%d\r\n", use_cnt);
         CDC_Send((uint8_t *)buffer, length);
     }
+#endif
     return 0;
 }

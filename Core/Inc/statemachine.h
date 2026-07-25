@@ -3,6 +3,10 @@
 
 #include "main.h"
 
+#define USE_USB_CDC 1
+#define USE_DIGIT_ENCODER 1
+#define USE_DI_KEY 1
+
 #define OK 0
 #define LED_ERROR 101
 #define CDC_ERROR 102
