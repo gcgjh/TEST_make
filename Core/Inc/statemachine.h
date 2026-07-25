@@ -11,5 +11,6 @@ uint8_t CDC_Send(uint8_t *buf, uint16_t len);
 int led_toggle(void);
 int statemachine(int (*func)(void));
 int DI_KEY_check(void);
+int digit_encoder_check(void);
 
 #endif /* __STATEMACHINE_H */
