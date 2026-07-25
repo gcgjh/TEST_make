@@ -1,7 +1,0 @@
-C:/Users/shehu/Desktop/C6T6引脚图/all_in_one/TEST_make/build/Debug/CMakeFiles/TEST_make.dir
-C:/Users/shehu/Desktop/C6T6引脚图/all_in_one/TEST_make/build/Debug/CMakeFiles/edit_cache.dir
-C:/Users/shehu/Desktop/C6T6引脚图/all_in_one/TEST_make/build/Debug/CMakeFiles/rebuild_cache.dir
-C:/Users/shehu/Desktop/C6T6引脚图/all_in_one/TEST_make/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
-C:/Users/shehu/Desktop/C6T6引脚图/all_in_one/TEST_make/build/Debug/cmake/stm32cubemx/CMakeFiles/USB_Device_Library.dir
-C:/Users/shehu/Desktop/C6T6引脚图/all_in_one/TEST_make/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
-C:/Users/shehu/Desktop/C6T6引脚图/all_in_one/TEST_make/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

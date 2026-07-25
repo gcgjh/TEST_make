@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/Users/shehu/Desktop/C6T6\u5f15\u811a\u56fe/all_in_one/TEST_make/build/Debug/cmake_install.cmake",
-		"C:/Users/shehu/Desktop/C6T6\u5f15\u811a\u56fe/all_in_one/TEST_make/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
